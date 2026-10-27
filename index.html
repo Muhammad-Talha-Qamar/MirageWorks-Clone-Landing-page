@@ -8,7 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -67,53 +67,53 @@
           </p>
         </div>
 
-        <ol class="feature-list">
-          <li class="feature-row reveal">
-            <span class="feature-num">01</span>
-            <div class="feature-copy">
+        <div class="card-grid">
+          <article class="float-card reveal">
+            <div class="float-card-media" style="background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=80')" role="img" aria-label="Team collaborating around a laptop"></div>
+            <div class="float-card-body">
+              <span class="feature-num">01</span>
               <h3>Process Optimization</h3>
               <p>Map, simplify, and automate the workflows that slow teams down.</p>
             </div>
-            <div class="feature-visual" style="background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=80')" role="img" aria-label="Team collaborating around a laptop"></div>
-          </li>
+          </article>
 
-          <li class="feature-row reveal">
-            <span class="feature-num">02</span>
-            <div class="feature-copy">
+          <article class="float-card reveal">
+            <div class="float-card-media" style="background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80')" role="img" aria-label="Financial documents and calculator"></div>
+            <div class="float-card-body">
+              <span class="feature-num">02</span>
               <h3>Financial Management</h3>
               <p>Clear books, compliant reporting, and numbers you can act on.</p>
             </div>
-            <div class="feature-visual" style="background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80')" role="img" aria-label="Financial documents and calculator"></div>
-          </li>
+          </article>
 
-          <li class="feature-row reveal">
-            <span class="feature-num">03</span>
-            <div class="feature-copy">
+          <article class="float-card reveal">
+            <div class="float-card-media" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=80')" role="img" aria-label="People working with dashboards on screens"></div>
+            <div class="float-card-body">
+              <span class="feature-num">03</span>
               <h3>ERP Solutions</h3>
               <p>Connect finance, ops, and people on one system that actually fits.</p>
             </div>
-            <div class="feature-visual" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=80')" role="img" aria-label="People working with dashboards on screens"></div>
-          </li>
-        </ol>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- ========== STATS ========== -->
     <section class="stats" aria-label="Company metrics">
       <div class="container stats-row">
-        <div class="stat reveal">
+        <div class="stat float-card reveal">
           <span class="stat-number" data-target="800">0</span><span class="stat-suffix">+</span>
           <p>Clients served</p>
         </div>
-        <div class="stat reveal">
+        <div class="stat float-card reveal">
           <span class="stat-number" data-target="200">0</span><span class="stat-suffix">+</span>
           <p>Projects delivered</p>
         </div>
-        <div class="stat reveal">
+        <div class="stat float-card reveal">
           <span class="stat-number" data-target="100">0</span><span class="stat-suffix">+</span>
           <p>People on the team</p>
         </div>
-        <div class="stat reveal">
+        <div class="stat float-card reveal">
           <span class="stat-number" data-target="12">0</span>
           <p>Countries reached</p>
         </div>
@@ -122,29 +122,31 @@
 
     <!-- ========== WHY US ========== -->
     <section class="section why" id="insight">
-      <div class="container why-layout">
-        <div class="why-copy">
-          <p class="eyebrow reveal">Why choose us</p>
-          <h2 class="reveal">A partner for the way business runs now</h2>
-          <p class="section-lead reveal">
-            Distributed teams, tighter compliance, faster decisions —
-            we keep the back office sharp so you can stay ahead.
-          </p>
-          <ul class="check-list reveal">
-            <li>Accounting accuracy backed by real-world expertise</li>
-            <li>Outsourcing shaped around your goals, not a template</li>
-            <li>Support that keeps ops moving across time zones</li>
-            <li>Results you can measure, month after month</li>
-          </ul>
-          <a class="btn btn-primary reveal" href="#contact">Talk To Us</a>
-        </div>
+      <div class="container">
+        <div class="why-card float-card reveal">
+          <div class="why-copy">
+            <p class="eyebrow">Why choose us</p>
+            <h2>A partner for the way business runs now</h2>
+            <p class="section-lead">
+              Distributed teams, tighter compliance, faster decisions —
+              we keep the back office sharp so you can stay ahead.
+            </p>
+            <ul class="check-list">
+              <li>Accounting accuracy backed by real-world expertise</li>
+              <li>Outsourcing shaped around your goals, not a template</li>
+              <li>Support that keeps ops moving across time zones</li>
+              <li>Results you can measure, month after month</li>
+            </ul>
+            <a class="btn btn-primary" href="#contact">Talk To Us</a>
+          </div>
 
-        <figure class="why-visual reveal">
-          <img
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
-            alt="Team collaborating in a bright modern workspace"
-          />
-        </figure>
+          <figure class="why-visual">
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
+              alt="Team collaborating in a bright modern workspace"
+            />
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -159,10 +161,10 @@
           </p>
         </div>
 
-        <div class="service-stack">
-          <article class="service reveal">
-            <div class="service-media" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1000&q=80')"></div>
-            <div class="service-body">
+        <div class="card-grid">
+          <article class="float-card service-card reveal">
+            <div class="float-card-media" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1000&q=80')"></div>
+            <div class="float-card-body">
               <h3>Financial Solutions</h3>
               <p>Day-to-day finance handled with clarity and compliance in mind.</p>
               <ul>
@@ -174,9 +176,9 @@
             </div>
           </article>
 
-          <article class="service reveal">
-            <div class="service-media" style="background-image: url('https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=1000&q=80')"></div>
-            <div class="service-body">
+          <article class="float-card service-card reveal">
+            <div class="float-card-media" style="background-image: url('https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=1000&q=80')"></div>
+            <div class="float-card-body">
               <h3>ERP Implementation</h3>
               <p>Systems that connect the dots — not another tool nobody uses.</p>
               <ul>
@@ -187,9 +189,9 @@
             </div>
           </article>
 
-          <article class="service reveal">
-            <div class="service-media" style="background-image: url('https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=1000&q=80')"></div>
-            <div class="service-body">
+          <article class="float-card service-card reveal">
+            <div class="float-card-media" style="background-image: url('https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=1000&q=80')"></div>
+            <div class="float-card-body">
               <h3>Business Process Outsourcing</h3>
               <p>Extend your team with people and process that plug in cleanly.</p>
               <ul>
@@ -205,14 +207,18 @@
 
     <!-- ========== CTA BAND ========== -->
     <section class="cta-band">
-      <div class="cta-media" aria-hidden="true"></div>
-      <div class="cta-shade" aria-hidden="true"></div>
-      <div class="container cta-content reveal">
-        <h2>Ready when your next chapter is</h2>
-        <p>Focus on growth — we’ll keep the operations side steady and sharp.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Get Started Today</a>
-          <a class="btn btn-ghost" href="#about">Learn More</a>
+      <div class="container">
+        <div class="cta-card reveal">
+          <div class="cta-media" aria-hidden="true"></div>
+          <div class="cta-shade" aria-hidden="true"></div>
+          <div class="cta-content">
+            <h2>Ready when your next chapter is</h2>
+            <p>Focus on growth — we’ll keep the operations side steady and sharp.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contact">Get Started Today</a>
+              <a class="btn btn-ghost" href="#about">Learn More</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -242,23 +248,25 @@
 
     <!-- ========== LOOKING AHEAD ========== -->
     <section class="section looking-ahead">
-      <div class="container ahead-layout">
-        <div class="ahead-copy reveal">
-          <p class="eyebrow">Looking ahead</p>
-          <h2>Built for what’s next</h2>
-          <p class="section-lead">
-            We explore AI, IoT, and smarter automation so your outsourcing stays
-            useful as the work itself changes — accounting as the foundation,
-            innovation as the edge.
-          </p>
-          <a class="text-link" href="#contact">Start a conversation</a>
+      <div class="container">
+        <div class="ahead-card float-card reveal">
+          <div class="ahead-copy">
+            <p class="eyebrow">Looking ahead</p>
+            <h2>Built for what’s next</h2>
+            <p class="section-lead">
+              We explore AI, IoT, and smarter automation so your outsourcing stays
+              useful as the work itself changes — accounting as the foundation,
+              innovation as the edge.
+            </p>
+            <a class="text-link" href="#contact">Start a conversation</a>
+          </div>
+          <figure class="ahead-visual">
+            <img
+              src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80"
+              alt="Bright modern office interior with glass and natural light"
+            />
+          </figure>
         </div>
-        <figure class="ahead-visual reveal">
-          <img
-            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80"
-            alt="Bright modern office interior with glass and natural light"
-          />
-        </figure>
       </div>
     </section>
 
