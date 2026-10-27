@@ -26,6 +26,8 @@
   --radius: 22px;
   --radius-sm: 14px;
   --radius-pill: 999px;
+  /* Fixed floating nav (~66px) + comfortable gap so the hero card never tucks under it */
+  --nav-clearance: 8.5rem;
 }
 
 *,
@@ -349,16 +351,29 @@ h4 {
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
-  align-items: flex-end;
-  /* Top padding clears the fixed floating nav so hero card never sits under it */
-  padding: 6.75rem 0 clamp(3.5rem, 8vw, 6.5rem);
+  flex-direction: column;
+  padding: 0 0 clamp(3rem, 7vw, 5.5rem);
   color: var(--white);
+  overflow: visible;
+}
+
+/* Hard spacer: reserves room under the fixed nav (padding alone can still let a tall flex child climb up) */
+.hero::before {
+  content: "";
+  flex: 0 0 var(--nav-clearance);
+  width: 100%;
+  pointer-events: none;
+}
+
+.hero-media,
+.hero-shade {
+  position: absolute;
+  inset: 0;
   overflow: hidden;
+  border-radius: 0;
 }
 
 .hero-media {
-  position: absolute;
-  inset: 0;
   background-color: #0a1a24;
   background-image:
     url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2000&q=80"),
@@ -369,21 +384,24 @@ h4 {
   background-repeat: no-repeat;
   transform: scale(1.05);
   animation: heroZoom 18s ease-out forwards;
+  z-index: 0;
 }
 
 .hero-shade {
-  position: absolute;
-  inset: 0;
   background:
     linear-gradient(180deg, rgba(6, 19, 26, 0.28) 0%, rgba(6, 19, 26, 0.42) 40%, rgba(6, 19, 26, 0.92) 100%),
     linear-gradient(95deg, rgba(6, 19, 26, 0.75) 0%, rgba(6, 19, 26, 0.18) 70%);
+  z-index: 0;
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
   width: min(100% - 2.5rem, var(--max));
+  margin-top: auto;
   margin-inline: auto;
+  margin-left: max(1.25rem, calc((100% - var(--max)) / 2));
+  flex-shrink: 0;
   padding: clamp(1.35rem, 3vw, 2rem) clamp(1.25rem, 3vw, 2.1rem);
   border-radius: calc(var(--radius) + 4px);
   background: rgba(11, 28, 38, 0.35);
@@ -391,7 +409,6 @@ h4 {
   backdrop-filter: blur(14px);
   box-shadow: var(--shadow);
   max-width: 42rem;
-  margin-left: max(1.25rem, calc((100% - var(--max)) / 2));
 }
 
 .brand-mark {
@@ -896,9 +913,8 @@ h4 {
   }
 
   .hero {
-    align-items: center;
-    padding-top: 5.75rem;
-    padding-bottom: 2.5rem;
+    --nav-clearance: 7.5rem;
+    padding-bottom: 2.25rem;
   }
 
   .hero-content {
@@ -908,11 +924,16 @@ h4 {
   }
 
   .hero h1 {
-    font-size: clamp(2.1rem, 11vw, 2.8rem);
+    font-size: clamp(2rem, 10vw, 2.6rem);
+  }
+
+  .brand-mark {
+    margin-bottom: 0.55rem;
   }
 
   .hero-lead {
-    margin: 0.85rem 0 1.35rem;
+    margin: 0.7rem 0 1.15rem;
+    font-size: 0.98rem;
   }
 
   .hero-actions {
