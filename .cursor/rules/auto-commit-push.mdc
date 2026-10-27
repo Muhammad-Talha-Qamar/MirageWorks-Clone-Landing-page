@@ -1,0 +1,16 @@
+---
+description: Always commit and push app changes to GitHub without waiting to be asked
+alwaysApply: true
+---
+
+# Auto commit & push
+
+Whenever you make changes in this application (code, styles, assets, config, or project rules):
+
+1. **Commit** those changes yourself when the work for that request is done — do not wait for the user to ask.
+2. **Push** the commit to the GitHub remote (`origin`) yourself after a successful commit.
+3. Follow the normal commit safety protocol (status/diff/log, HEREDOC message, no force-push to main/master, no secrets, no `--no-verify` unless asked).
+4. Skip empty commits. Include relevant untracked project files; ignore noise like `.DS_Store` unless the user wants it.
+5. After pushing, briefly confirm the commit message and that the push succeeded (include the remote branch if useful).
+
+This project rule **overrides** the default “only commit when asked” user preference **for this repository only**.
